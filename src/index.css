@@ -1,0 +1,156 @@
+/* ── Google Fonts — must be first ─────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Custom Properties ─────────────────────────────────────────── */
+:root {
+  --background: 240 10% 98%; /* #faf9f5 */
+  --foreground: 240 5% 10%;   /* #1a1919 */
+  --card: 240 8% 95%;     /* #f3f2f1 */
+  --cta: 221 83% 53%;        /* #2563eb */
+  --muted: 240 4% 45%;      /* #706e6e */
+}
+
+/* Dark mode: superfícies realmente escuras, não apenas invertidas */
+.dark {
+  --background: 240 5% 8%; /* #151414 */
+  --foreground: 240 10% 98%; /* #faf9f5 */
+  --card: 240 4% 12%;    /* #1f1e1e */
+  --cta: 221 83% 53%;       /* #2563eb */
+  --muted: 240 4% 65%;     /* #a8a6a6 */
+  color-scheme: dark;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  transition: background-color 0.35s ease, color 0.35s ease;
+  margin: 0;
+}
+
+/* ── Selection ─────────────────────────────────────────────────────── */
+::selection {
+  background-color: hsl(var(--cta) / 0.8);
+  color: #ffffff;
+}
+
+/* ── Eyebrow label ─────────────────────────────────────────────────── */
+@layer base {
+  .eyebrow {
+    @apply inline-flex items-center gap-3 font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-muted;
+  }
+  .eyebrow::before {
+    content: '';
+    @apply block w-4 h-px bg-cta flex-shrink-0;
+  }
+}
+
+/* ── Utilities ─────────────────────────────────────────────────────── */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .font-display {
+    font-family: 'DM Sans', 'Copernicus', 'Tiempos Headline', Georgia, serif;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+}
+
+/* ── Orb Cursor ────────────────────────────────── */
+.orb-cursor__dot,
+.orb-cursor__follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 9999;
+  mix-blend-mode: exclusion;
+  will-change: transform;
+}
+
+.orb-cursor__dot {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+}
+
+.orb-cursor__follower {
+  width: 30px;
+  height: 30px;
+  background-color: hsla(0, 0%, 100%, 0.5);
+  backdrop-filter: blur(2px) invert(1);
+  -webkit-backdrop-filter: blur(2px) invert(1);
+  transition:
+    width 0.3s ease,
+    height 0.3s ease,
+    background-color 0.3s ease;
+}
+
+@media (hover: none) or (pointer: coarse) {
+  .orb-cursor__dot,
+  .orb-cursor__follower {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb-cursor__dot,
+  .orb-cursor__follower {
+    display: none;
+  }
+}
+
+/* ── Dark mode — seções com background próprio ─────────────────────── */
+
+/* Canvas sections: bg-canvas → dark usa #0d0c0b */
+.dark .dark\:bg-page-dark {
+  background-color: #0d0c0b;
+}
+
+/* Surface cards: bg-surface-card → dark usa #181715 */
+.dark section.section-card {
+  background-color: #181715;
+}
+
+/* ── Scrollbar refinada ─────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #e6dfd8;
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #252320;
+}
+
+/* ── Lenis smooth scroll override ──────────────────────────────────── */
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}

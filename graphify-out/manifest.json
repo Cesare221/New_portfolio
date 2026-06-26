@@ -1,0 +1,102 @@
+{
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\eslint.config.js": {
+    "mtime": 1778123166.6443672,
+    "ast_hash": "3aa4b57d7f08181d86bde52a4dcb7f22",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\package.json": {
+    "mtime": 1778201934.9974358,
+    "ast_hash": "caa5ff6fbaa8162334675a515aba4005",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\postcss.config.js": {
+    "mtime": 1778182658.8944738,
+    "ast_hash": "ef3ba2a81ba19f8ea5ddf625521e96f0",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\tailwind.config.js": {
+    "mtime": 1779581635.04937,
+    "ast_hash": "94ad2b3a381f5c00b8e90e625a775d10",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\vite.config.js": {
+    "mtime": 1778123166.6599445,
+    "ast_hash": "88439104b3c207f17d33ef3160e3b080",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\.opencode\\opencode.json": {
+    "mtime": 1779581677.132181,
+    "ast_hash": "f2ae21510d07365eb2bce8159272c7a0",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\.opencode\\plugins\\graphify.js": {
+    "mtime": 1779582570.5974813,
+    "ast_hash": "77c160498c812c35c040a48e1f17dfc1",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\src\\App.jsx": {
+    "mtime": 1779582457.242928,
+    "ast_hash": "5d1bf53b851c35ec6a66006ccb5c5431",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\src\\main.jsx": {
+    "mtime": 1778123166.717903,
+    "ast_hash": "e13723e2574429d9a6d849727e3ff695",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\src\\components\\ParticleBackground.jsx": {
+    "mtime": 1779582498.9963436,
+    "ast_hash": "1d230f4429aee0bcd8e7c372be43942c",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\src\\components\\ProjectCard.jsx": {
+    "mtime": 1779582344.716702,
+    "ast_hash": "862e4cf072d7e440628e0e04c08a0f61",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\AGENTS.md": {
+    "mtime": 1779581677.1307502,
+    "ast_hash": "1ee4049db42884b83967e4ee2240f1f7",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\DESIGN.md": {
+    "mtime": 1779581591.4458652,
+    "ast_hash": "8b219cdaaa1f01e7fc0509ab5495a095",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\index.html": {
+    "mtime": 1779486907.216892,
+    "ast_hash": "103d5c543142c2435a94c3b98f71377e",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\README.md": {
+    "mtime": 1779581912.870453,
+    "ast_hash": "a2c4b249e6731ead54da8098a6f8715b",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\public\\favicon.svg": {
+    "mtime": 1778123166.7849078,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\public\\icons.svg": {
+    "mtime": 1778123166.8088415,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\src\\assets\\hero.png": {
+    "mtime": 1778123166.7487085,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\src\\assets\\react.svg": {
+    "mtime": 1778123166.8358798,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\src\\assets\\vite.svg": {
+    "mtime": 1778123166.8560941,
+    "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": ""
+  }
+}
