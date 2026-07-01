@@ -77,6 +77,40 @@ export const PROJECTS = [
     liveUrl: 'https://bolaohemo.vercel.app/',
     githubUrl: 'https://github.com/Cesare221/bolao-hemo',
   },
+  {
+    id: 4,
+    title: 'MemoryDepo - Segundo Cérebro Pessoal',
+    description:
+      'Aplicação web para capturar notas, ideias, links e trechos em um espaço pessoal com busca instantânea e organização por tipo.',
+    problem:
+      'Ideias, referências e pequenos trechos úteis se perdem quando ficam espalhados entre abas, conversas, arquivos e anotações soltas.',
+    solution:
+      'Criei um app React com captura rápida, filtros por categoria, busca instantânea, itens fixados, edição, cópia, exportação e importação em JSON.',
+    impact:
+      'Ajuda o usuário a transformar informações dispersas em um repositório pessoal consultável, leve e acessível direto pelo navegador.',
+    image: '/images/memorydepo-project.webp',
+    imageFit: 'cover',
+    tags: ['React', 'Vite', 'LocalStorage', 'UX'],
+    liveUrl: 'https://memorycard-gold.vercel.app/',
+    githubUrl: 'https://github.com/Cesare221/MemoryCard',
+  },
+  {
+    id: 5,
+    title: 'Life Dashboard - Meu Painel Pessoal',
+    description:
+      'Painel pessoal para acompanhar hábitos, sono, água, passos, despesas e memória diária em uma interface leve e responsiva.',
+    problem:
+      'Rotinas pessoais costumam ficar divididas entre aplicativos, planilhas e anotações, dificultando uma visão clara do dia e do progresso.',
+    solution:
+      'Desenvolvi um dashboard React com perfil, progresso do ano/mês/dia, hábitos, métricas de saúde, despesas e histórico salvo no navegador.',
+    impact:
+      'Entrega uma visão prática da rotina em um só lugar, ajudando o usuário a acompanhar consistência, gastos e indicadores pessoais sem login.',
+    image: '/images/lifedashboard-project.webp',
+    imageFit: 'cover',
+    tags: ['React', 'Vite', 'Docker', 'Fly.io', 'LocalStorage'],
+    liveUrl: 'https://meu-painel-pessoal.fly.dev/',
+    githubUrl: 'https://github.com/Cesare221/Life_control_dashboard',
+  },
 ];
 
 export const NAV_LINKS = [

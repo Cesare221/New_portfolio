@@ -520,7 +520,7 @@
       "label": "AntigravityBackground",
       "file_type": "code",
       "source_file": "src/App.jsx",
-      "source_location": "L26",
+      "source_location": "L27",
       "id": "src_app_antigravitybackground",
       "community": 5,
       "norm_label": "antigravitybackground"
@@ -529,7 +529,7 @@
       "label": "TECH_ICONS",
       "file_type": "code",
       "source_file": "src/App.jsx",
-      "source_location": "L32",
+      "source_location": "L33",
       "id": "src_app_tech_icons",
       "community": 5,
       "norm_label": "tech_icons"
@@ -538,7 +538,7 @@
       "label": "techStackWithIcons",
       "file_type": "code",
       "source_file": "src/App.jsx",
-      "source_location": "L48",
+      "source_location": "L49",
       "id": "src_app_techstackwithicons",
       "community": 5,
       "norm_label": "techstackwithicons"
@@ -547,7 +547,7 @@
       "label": "initTheme()",
       "file_type": "code",
       "source_file": "src/App.jsx",
-      "source_location": "L56",
+      "source_location": "L57",
       "id": "src_app_inittheme",
       "community": 5,
       "norm_label": "inittheme()"
@@ -556,7 +556,7 @@
       "label": "usePrefersReducedMotion()",
       "file_type": "code",
       "source_file": "src/App.jsx",
-      "source_location": "L64",
+      "source_location": "L65",
       "id": "src_app_useprefersreducedmotion",
       "community": 5,
       "norm_label": "useprefersreducedmotion()"
@@ -565,7 +565,7 @@
       "label": "App()",
       "file_type": "code",
       "source_file": "src/App.jsx",
-      "source_location": "L81",
+      "source_location": "L82",
       "id": "src_app_app",
       "community": 5,
       "norm_label": "app()"
@@ -601,7 +601,7 @@
       "label": "ProjectCard()",
       "file_type": "code",
       "source_file": "src/components/ProjectCard.jsx",
-      "source_location": "L5",
+      "source_location": "L7",
       "id": "components_projectcard_projectcard",
       "community": 6,
       "norm_label": "projectcard()"
@@ -610,7 +610,7 @@
       "label": "SectionHeader()",
       "file_type": "code",
       "source_file": "src/components/ProjectCard.jsx",
-      "source_location": "L103",
+      "source_location": "L109",
       "id": "components_projectcard_sectionheader",
       "community": 6,
       "norm_label": "sectionheader()"
@@ -619,10 +619,28 @@
       "label": "Section()",
       "file_type": "code",
       "source_file": "src/components/ProjectCard.jsx",
-      "source_location": "L126",
+      "source_location": "L132",
       "id": "components_projectcard_section",
       "community": 6,
       "norm_label": "section()"
+    },
+    {
+      "label": "ProjectCarousel.jsx",
+      "file_type": "code",
+      "source_file": "src/components/ProjectCarousel.jsx",
+      "source_location": "L1",
+      "id": "src_components_projectcarousel_jsx",
+      "community": 6,
+      "norm_label": "projectcarousel.jsx"
+    },
+    {
+      "label": "ProjectCarousel()",
+      "file_type": "code",
+      "source_file": "src/components/ProjectCarousel.jsx",
+      "source_location": "L6",
+      "id": "components_projectcarousel_projectcarousel",
+      "community": 6,
+      "norm_label": "projectcarousel()"
     },
     {
       "label": "AntigravityBackground.jsx",
@@ -769,6 +787,33 @@
       "norm_label": "orbcursor()"
     },
     {
+      "label": "spotlight-card.jsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/spotlight-card.jsx",
+      "source_location": "L1",
+      "id": "src_components_ui_spotlight_card_jsx",
+      "community": 6,
+      "norm_label": "spotlight-card.jsx"
+    },
+    {
+      "label": "GLOW_COLORS",
+      "file_type": "code",
+      "source_file": "src/components/ui/spotlight-card.jsx",
+      "source_location": "L3",
+      "id": "ui_spotlight_card_glow_colors",
+      "community": 6,
+      "norm_label": "glow_colors"
+    },
+    {
+      "label": "SpotlightCard()",
+      "file_type": "code",
+      "source_file": "src/components/ui/spotlight-card.jsx",
+      "source_location": "L10",
+      "id": "ui_spotlight_card_spotlightcard",
+      "community": 6,
+      "norm_label": "spotlightcard()"
+    },
+    {
       "label": "tech-marquee.jsx",
       "file_type": "code",
       "source_file": "src/components/ui/tech-marquee.jsx",
@@ -826,7 +871,7 @@
       "label": "NAV_LINKS",
       "file_type": "code",
       "source_file": "src/data/portfolio.js",
-      "source_location": "L82",
+      "source_location": "L116",
       "id": "data_portfolio_nav_links",
       "community": 5,
       "norm_label": "nav_links"
@@ -1587,9 +1632,9 @@
       "source_file": "package.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "meu_portfolio_package_scripts",
-      "target": "meu_portfolio_package_scripts_test",
-      "confidence_score": 1.0
+      "target": "meu_portfolio_package_scripts_test"
     },
     {
       "relation": "contains",
@@ -1837,9 +1882,9 @@
       "source_file": "audit-evidence/audit-data.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "audit_evidence_audit_data_json",
-      "target": "audit_evidence_audit_data_bodylength",
-      "confidence_score": 1.0
+      "target": "audit_evidence_audit_data_bodylength"
     },
     {
       "relation": "contains",
@@ -1847,9 +1892,9 @@
       "source_file": "audit-evidence/audit-data.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "audit_evidence_audit_data_json",
-      "target": "audit_evidence_audit_data_buttons",
-      "confidence_score": 1.0
+      "target": "audit_evidence_audit_data_buttons"
     },
     {
       "relation": "contains",
@@ -1857,9 +1902,9 @@
       "source_file": "audit-evidence/audit-data.json",
       "source_location": "L65",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "audit_evidence_audit_data_json",
-      "target": "audit_evidence_audit_data_canvases",
-      "confidence_score": 1.0
+      "target": "audit_evidence_audit_data_canvases"
     },
     {
       "relation": "contains",
@@ -1867,9 +1912,9 @@
       "source_file": "audit-evidence/audit-data.json",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "audit_evidence_audit_data_json",
-      "target": "audit_evidence_audit_data_csssupportsreducedmotion",
-      "confidence_score": 1.0
+      "target": "audit_evidence_audit_data_csssupportsreducedmotion"
     },
     {
       "relation": "contains",
@@ -1877,9 +1922,9 @@
       "source_file": "audit-evidence/audit-data.json",
       "source_location": "L75",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "audit_evidence_audit_data_json",
-      "target": "audit_evidence_audit_data_focusables",
-      "confidence_score": 1.0
+      "target": "audit_evidence_audit_data_focusables"
     },
     {
       "relation": "contains",
@@ -1887,9 +1932,9 @@
       "source_file": "audit-evidence/audit-data.json",
       "source_location": "L224",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "audit_evidence_audit_data_json",
-      "target": "audit_evidence_audit_data_headings",
-      "confidence_score": 1.0
+      "target": "audit_evidence_audit_data_headings"
     },
     {
       "relation": "contains",
@@ -1897,9 +1942,9 @@
       "source_file": "audit-evidence/audit-data.json",
       "source_location": "L258",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "audit_evidence_audit_data_json",
-      "target": "audit_evidence_audit_data_images",
-      "confidence_score": 1.0
+      "target": "audit_evidence_audit_data_images"
     },
     {
       "relation": "contains",
@@ -1907,9 +1952,9 @@
       "source_file": "audit-evidence/audit-data.json",
       "source_location": "L305",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "audit_evidence_audit_data_json",
-      "target": "audit_evidence_audit_data_lang",
-      "confidence_score": 1.0
+      "target": "audit_evidence_audit_data_lang"
     },
     {
       "relation": "contains",
@@ -1917,9 +1962,9 @@
       "source_file": "audit-evidence/audit-data.json",
       "source_location": "L306",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "audit_evidence_audit_data_json",
-      "target": "audit_evidence_audit_data_links",
-      "confidence_score": 1.0
+      "target": "audit_evidence_audit_data_links"
     },
     {
       "relation": "contains",
@@ -1927,9 +1972,9 @@
       "source_file": "audit-evidence/audit-data.json",
       "source_location": "L385",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "audit_evidence_audit_data_json",
-      "target": "audit_evidence_audit_data_meta",
-      "confidence_score": 1.0
+      "target": "audit_evidence_audit_data_meta"
     },
     {
       "relation": "contains",
@@ -1937,9 +1982,9 @@
       "source_file": "audit-evidence/audit-data.json",
       "source_location": "L402",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "audit_evidence_audit_data_json",
-      "target": "audit_evidence_audit_data_sections",
-      "confidence_score": 1.0
+      "target": "audit_evidence_audit_data_sections"
     },
     {
       "relation": "contains",
@@ -1947,9 +1992,9 @@
       "source_file": "audit-evidence/audit-data.json",
       "source_location": "L424",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "audit_evidence_audit_data_json",
-      "target": "audit_evidence_audit_data_title",
-      "confidence_score": 1.0
+      "target": "audit_evidence_audit_data_title"
     },
     {
       "relation": "imports_from",
@@ -1958,9 +2003,9 @@
       "source_file": "scripts/validate-portfolio.mjs",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_validate_portfolio_mjs",
-      "target": "src_data_portfolio_js",
-      "confidence_score": 1.0
+      "target": "src_data_portfolio_js"
     },
     {
       "relation": "imports",
@@ -1969,9 +2014,9 @@
       "source_file": "scripts/validate-portfolio.mjs",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_validate_portfolio_mjs",
-      "target": "data_portfolio_projects",
-      "confidence_score": 1.0
+      "target": "data_portfolio_projects"
     },
     {
       "relation": "imports_from",
@@ -1980,9 +2025,9 @@
       "source_file": "scripts/validate-portfolio.mjs",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_validate_portfolio_mjs",
-      "target": "src_data_sitemeta_js",
-      "confidence_score": 1.0
+      "target": "src_data_sitemeta_js"
     },
     {
       "relation": "imports",
@@ -1991,9 +2036,9 @@
       "source_file": "scripts/validate-portfolio.mjs",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_validate_portfolio_mjs",
-      "target": "data_sitemeta_site_meta",
-      "confidence_score": 1.0
+      "target": "data_sitemeta_site_meta"
     },
     {
       "relation": "imports_from",
@@ -2016,6 +2061,17 @@
       "confidence_score": 1.0,
       "source": "src_app_jsx",
       "target": "components_projectcard_section"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_projectcarousel_jsx",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -2079,9 +2135,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_data_portfolio_js",
-      "confidence_score": 1.0
+      "target": "src_data_portfolio_js"
     },
     {
       "relation": "imports",
@@ -2090,9 +2146,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "data_portfolio_nav_links",
-      "confidence_score": 1.0
+      "target": "data_portfolio_nav_links"
     },
     {
       "relation": "imports",
@@ -2101,9 +2157,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "data_portfolio_personal",
-      "confidence_score": 1.0
+      "target": "data_portfolio_personal"
     },
     {
       "relation": "imports",
@@ -2112,9 +2168,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "data_portfolio_projects",
-      "confidence_score": 1.0
+      "target": "data_portfolio_projects"
     },
     {
       "relation": "imports",
@@ -2123,9 +2179,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "data_portfolio_tech_stack",
-      "confidence_score": 1.0
+      "target": "data_portfolio_tech_stack"
     },
     {
       "relation": "contains",
@@ -2133,9 +2189,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_app_antigravitybackground",
-      "confidence_score": 1.0
+      "target": "src_app_antigravitybackground"
     },
     {
       "relation": "contains",
@@ -2143,9 +2199,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_app_tech_icons",
-      "confidence_score": 1.0
+      "target": "src_app_tech_icons"
     },
     {
       "relation": "contains",
@@ -2153,9 +2209,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_app_techstackwithicons",
-      "confidence_score": 1.0
+      "target": "src_app_techstackwithicons"
     },
     {
       "relation": "contains",
@@ -2173,9 +2229,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L64",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_app_useprefersreducedmotion",
-      "confidence_score": 1.0
+      "target": "src_app_useprefersreducedmotion"
     },
     {
       "relation": "contains",
@@ -2286,9 +2342,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L87",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_app",
-      "target": "src_app_useprefersreducedmotion",
-      "confidence_score": 1.0
+      "target": "src_app_useprefersreducedmotion"
     },
     {
       "relation": "re_exports",
@@ -2319,8 +2375,19 @@
       "source_file": "src/components/index.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_index_js",
-      "target": "components_projectcard_sectionheader",
+      "target": "components_projectcard_sectionheader"
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/index.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_components_index_js",
+      "target": "src_components_projectcarousel_jsx",
       "confidence_score": 1.0
     },
     {
@@ -2344,6 +2411,28 @@
       "confidence_score": 1.0,
       "source": "src_components_index_js",
       "target": "components_projectcard_skillicon"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ProjectCard.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_projectcard_jsx",
+      "target": "src_components_ui_spotlight_card_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ProjectCard.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_projectcard_jsx",
+      "target": "ui_spotlight_card_spotlightcard",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2376,6 +2465,17 @@
       "target": "components_projectcard_section"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ProjectCarousel.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_projectcarousel_jsx",
+      "target": "src_components_projectcard_jsx",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ProjectCard.jsx",
@@ -2394,6 +2494,16 @@
       "confidence_score": 1.0,
       "source": "src_components_projectcard_jsx",
       "target": "components_projectcard_button"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ProjectCarousel.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_components_projectcarousel_jsx",
+      "target": "components_projectcarousel_projectcarousel",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2644,6 +2754,26 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/spotlight-card.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_ui_spotlight_card_jsx",
+      "target": "ui_spotlight_card_glow_colors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/spotlight-card.jsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_components_ui_spotlight_card_jsx",
+      "target": "ui_spotlight_card_spotlightcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/components/ui/tech-marquee.jsx",
       "source_location": "L5",
       "weight": 1.0,
@@ -2657,9 +2787,9 @@
       "source_file": "src/data/portfolio.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_data_portfolio_js",
-      "target": "data_portfolio_personal",
-      "confidence_score": 1.0
+      "target": "data_portfolio_personal"
     },
     {
       "relation": "contains",
@@ -2667,9 +2797,9 @@
       "source_file": "src/data/portfolio.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_data_portfolio_js",
-      "target": "data_portfolio_tech_stack",
-      "confidence_score": 1.0
+      "target": "data_portfolio_tech_stack"
     },
     {
       "relation": "contains",
@@ -2677,9 +2807,9 @@
       "source_file": "src/data/portfolio.js",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_data_portfolio_js",
-      "target": "data_portfolio_projects",
-      "confidence_score": 1.0
+      "target": "data_portfolio_projects"
     },
     {
       "relation": "contains",
@@ -2687,9 +2817,9 @@
       "source_file": "src/data/portfolio.js",
       "source_location": "L82",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_data_portfolio_js",
-      "target": "data_portfolio_nav_links",
-      "confidence_score": 1.0
+      "target": "data_portfolio_nav_links"
     },
     {
       "relation": "contains",
@@ -2697,9 +2827,9 @@
       "source_file": "src/data/siteMeta.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_data_sitemeta_js",
-      "target": "data_sitemeta_site_meta",
-      "confidence_score": 1.0
+      "target": "data_sitemeta_site_meta"
     },
     {
       "relation": "calls",
@@ -3267,5 +3397,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1952e18e32009569fe7e2690c801d54ab0b28041"
+  "built_at_commit": "ddf80b41d0b813a2186984bd3a81f50794b2007c"
 }

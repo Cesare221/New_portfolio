@@ -9,7 +9,10 @@ const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
 assert.ok(SITE_META.title.includes('Cesar Delmondes'), 'site title should include the owner name');
 assert.ok(SITE_META.description.length >= 120, 'site description should be detailed enough for SEO previews');
 assert.ok(SITE_META.ogImage.endsWith('.png'), 'Open Graph image should be a PNG preview');
-assert.equal(SITE_META.url, '', 'site URL should stay empty until a real deploy URL is available');
+assert.equal(SITE_META.url, 'https://cesarddev.com.br', 'site URL should use the production domain');
+assert.ok(html.includes('<link rel="canonical" href="https://cesarddev.com.br/"'), 'HTML should include the production canonical URL');
+assert.ok(html.includes('<meta property="og:url" content="https://cesarddev.com.br/"'), 'HTML should include the production Open Graph URL');
+assert.ok(html.includes('https://cesarddev.com.br/og-image.png'), 'HTML should use an absolute social preview image URL');
 assert.ok(!html.includes('cesardelmondes.dev'), 'HTML should not publish a placeholder domain');
 
 for (const project of PROJECTS) {

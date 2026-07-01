@@ -76,6 +76,73 @@ button:focus-visible {
   }
 }
 
+/* Project cards: 21st-style spotlight surface */
+.spotlight-card {
+  --spotlight-x: 50%;
+  --spotlight-y: 50%;
+  --spotlight-hue: 221;
+  position: relative;
+  isolation: isolate;
+}
+
+.spotlight-card::before,
+.spotlight-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.spotlight-card::before {
+  z-index: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(
+      340px circle at var(--spotlight-x) var(--spotlight-y),
+      hsl(var(--spotlight-hue) 92% 62% / 0.16),
+      transparent 58%
+    );
+}
+
+.spotlight-card::after {
+  z-index: 2;
+  border-radius: inherit;
+  padding: 1px;
+  background:
+    radial-gradient(
+      260px circle at var(--spotlight-x) var(--spotlight-y),
+      hsl(var(--spotlight-hue) 92% 66% / 0.72),
+      transparent 62%
+    );
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+.spotlight-card:hover::before,
+.spotlight-card:hover::after,
+.spotlight-card:focus-within::before,
+.spotlight-card:focus-within::after {
+  opacity: 1;
+}
+
+.spotlight-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.project-carousel {
+  scrollbar-width: none;
+  scroll-padding-inline: 1px;
+}
+
+.project-carousel::-webkit-scrollbar {
+  display: none;
+}
+
 /* ── Orb Cursor ────────────────────────────────── */
 .orb-cursor__dot,
 .orb-cursor__follower {

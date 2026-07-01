@@ -1,6 +1,8 @@
 import { FaGithub } from "react-icons/fa";
 import { ArrowUpRight } from "lucide-react";
 
+import { SpotlightCard } from "./ui/spotlight-card.jsx";
+
 // ── ProjectCard ─────────────────────────────────────────────────────
 export default function ProjectCard({
   title,
@@ -17,7 +19,11 @@ export default function ProjectCard({
   const isContainedImage = imageFit === "contain";
 
   return (
-    <article className="group flex flex-col rounded-xl bg-[hsl(var(--card)/0.98)] dark:bg-[hsl(var(--card)/0.96)] border border-hairline dark:border-white/12 overflow-hidden shadow-[0_12px_40px_rgba(15,23,42,0.08)] dark:shadow-[0_18px_55px_rgba(0,0,0,0.38)] backdrop-blur-sm transition-all duration-300 hover:border-cta/35 hover:shadow-[0_18px_58px_rgba(15,23,42,0.14)] dark:hover:shadow-[0_22px_70px_rgba(0,0,0,0.5)] hover:-translate-y-1">
+    <SpotlightCard
+      as="article"
+      glowColor="blue"
+      className="group flex h-full w-full flex-col rounded-xl bg-[hsl(var(--card)/0.98)] dark:bg-[hsl(var(--card)/0.96)] border border-hairline dark:border-white/12 overflow-hidden shadow-[0_12px_40px_rgba(15,23,42,0.08)] dark:shadow-[0_18px_55px_rgba(0,0,0,0.38)] backdrop-blur-sm transition-all duration-300 hover:border-cta/35 hover:shadow-[0_18px_58px_rgba(15,23,42,0.14)] dark:hover:shadow-[0_22px_70px_rgba(0,0,0,0.5)] hover:-translate-y-1"
+    >
 
       {/* Imagem */}
       <div className={`relative h-56 overflow-hidden ${isContainedImage ? "bg-[#071017]" : "bg-background"}`}>
@@ -95,7 +101,7 @@ export default function ProjectCard({
           </a>
         </div>
       </div>
-    </article>
+    </SpotlightCard>
   );
 }
 

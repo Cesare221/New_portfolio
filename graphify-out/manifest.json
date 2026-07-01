@@ -35,8 +35,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\src\\App.jsx": {
-    "mtime": 1782911769.245133,
-    "ast_hash": "18f3eb5a7edbc2dc2bc413a864aad53b",
+    "mtime": 1782917146.4484956,
+    "ast_hash": "a52660a736da58e102ab1026db877355",
     "semantic_hash": ""
   },
   "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\src\\main.jsx": {
@@ -45,13 +45,13 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\src\\components\\ProjectCard.jsx": {
-    "mtime": 1782911769.2429347,
-    "ast_hash": "618f119d7721d1cf29d255046e423196",
+    "mtime": 1782917126.4392757,
+    "ast_hash": "c1c21124d43ad20d84bc15d4f2345bc8",
     "semantic_hash": ""
   },
   "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\index.html": {
-    "mtime": 1782874125.2833014,
-    "ast_hash": "c7565d3b81170781d6c2b9dda85bce9e",
+    "mtime": 1782917422.415805,
+    "ast_hash": "8c6a9c1e72accb06c7d0c30249a56f8b",
     "semantic_hash": ""
   },
   "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\public\\favicon.svg": {
@@ -80,8 +80,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\src\\components\\index.js": {
-    "mtime": 1782873289.4574587,
-    "ast_hash": "8a4c4bd11d90483b71aab337ed4c7c8c",
+    "mtime": 1782917181.167682,
+    "ast_hash": "2ac4a167c539917ff582aa66529f03f7",
     "semantic_hash": ""
   },
   "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\src\\components\\ui\\AntigravityBackground.jsx": {
@@ -125,18 +125,18 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\scripts\\validate-portfolio.mjs": {
-    "mtime": 1782874101.747102,
-    "ast_hash": "f8d068560462117d1d2b405973ba1aac",
+    "mtime": 1782917437.6940186,
+    "ast_hash": "819183e884c6bd6ee7f09c3302aae14a",
     "semantic_hash": ""
   },
   "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\src\\data\\portfolio.js": {
-    "mtime": 1782874146.043401,
-    "ast_hash": "486b947be297505d65a33b39ba811f9e",
+    "mtime": 1782916125.0350554,
+    "ast_hash": "9d04f5c4b0f307981bd31fa34453f791",
     "semantic_hash": ""
   },
   "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\src\\data\\siteMeta.js": {
-    "mtime": 1782874125.2793875,
-    "ast_hash": "de83f2ee8422310711f2a54556cc0758",
+    "mtime": 1782917385.623208,
+    "ast_hash": "4f9bf50b2beb2c68f6a13cec184e51bf",
     "semantic_hash": ""
   },
   "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\audit-evidence\\01-desktop-full.png": {
@@ -287,6 +287,26 @@
   "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\audit-evidence\\after\\project-cards-opacity-update.png": {
     "mtime": 1782911745.4988625,
     "ast_hash": "fad46bfc3b7bd1bfacb16e8d4da645ab",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\public\\images\\memorydepo-project.webp": {
+    "mtime": 1782915584.06032,
+    "ast_hash": "08dc893e25367f1e840bc4252a45c617",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\public\\images\\lifedashboard-project.webp": {
+    "mtime": 1782916096.2338078,
+    "ast_hash": "d2ae9505b16a79dfa1a7264eb3992e88",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\src\\components\\ProjectCarousel.jsx": {
+    "mtime": 1782917172.6610756,
+    "ast_hash": "528aba462920728f2e4db4fe5d509e06",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\src\\components\\ui\\spotlight-card.jsx": {
+    "mtime": 1782917086.614861,
+    "ast_hash": "295ff4727f23ba407fe4df054bda125c",
     "semantic_hash": ""
   }
 }

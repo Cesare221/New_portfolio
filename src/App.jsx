@@ -15,7 +15,8 @@ import {
 } from 'react-icons/si';
 import { Menu, X, ArrowUpRight, Copy, Check } from 'lucide-react';
 
-import ProjectCard, { Section } from './components/ProjectCard.jsx';
+import { Section } from './components/ProjectCard.jsx';
+import ProjectCarousel from './components/ProjectCarousel.jsx';
 import { TechMarquee }            from './components/ui/tech-marquee.jsx';
 import { LightPullThemeSwitcher } from './components/ui/light-pull-theme-switcher.jsx';
 import OrbCursor                  from './components/ui/OrbCursor.jsx';
@@ -440,11 +441,7 @@ export default function App() {
             bg={`${bgCard}`}
             className="gsap-reveal"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-0">
-              {PROJECTS.map((project) => (
-                <ProjectCard key={project.id} {...project} />
-              ))}
-            </div>
+            <ProjectCarousel projects={PROJECTS} />
           </Section>
 
           {/* ══════════════════════════════════════════════
