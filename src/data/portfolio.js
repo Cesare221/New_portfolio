@@ -3,7 +3,7 @@ export const PERSONAL = {
   firstName: 'Cesar',
   role: 'Desenvolvedor Full-stack',
   bio:
-    'Construo aplicações web completas com React, Node.js e TypeScript, unindo engenharia sólida, interfaces claras e foco em resultados reais para o usuário.',
+    'Construo aplicacoes web completas com React, Node.js e TypeScript, unindo engenharia solida, interfaces claras e foco em resultados reais para o usuario.',
   email: 'cesard.dev@gmail.com',
   linkedin: 'https://linkedin.com/in/cdelmondes',
   github: 'https://github.com/Cesare221',
@@ -29,15 +29,15 @@ export const TECH_STACK = [
 export const PROJECTS = [
   {
     id: 1,
-    title: 'Clinident - Gestão de Clínica',
+    title: 'Clinident - Gestao de Clinica',
     description:
-      'Sistema full-stack para clínicas odontológicas com dashboard, agenda, confirmação por link, remarcação e fluxo de WhatsApp.',
+      'Sistema full-stack para clinicas odontologicas com dashboard, agenda, confirmacao por link, remarcacao e fluxo de WhatsApp.',
     problem:
-      'Clínicas dependem de confirmações manuais, agenda fragmentada e comunicação dispersa, o que aumenta faltas e retrabalho operacional.',
+      'Clinicas dependem de confirmacoes manuais, agenda fragmentada e comunicacao dispersa, o que aumenta faltas e retrabalho operacional.',
     solution:
-      'Desenvolvi uma aplicação com painel administrativo, agenda centralizada, confirmação por link e fluxo de atendimento conectado ao WhatsApp.',
+      'Desenvolvi uma aplicacao com painel administrativo, agenda centralizada, confirmacao por link e fluxo de atendimento conectado ao WhatsApp.',
     impact:
-      'Centraliza a rotina da clínica, reduz etapas manuais e torna o acompanhamento de consultas mais claro para equipe e pacientes.',
+      'Centraliza a rotina da clinica, reduz etapas manuais e torna o acompanhamento de consultas mais claro para equipe e pacientes.',
     image: '/images/clinident-project.webp',
     imageFit: 'contain',
     tags: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'WhatsApp'],
@@ -46,31 +46,47 @@ export const PROJECTS = [
   },
   {
     id: 2,
-    title: 'Docgen - Leitor OCR',
+    title: 'Docgen - Automacao Juridica',
     description:
-      'Ferramenta para extração de dados via OCR e geração automatizada de documentos para acelerar fluxos jurídicos.',
+      'Pipeline juridico para ler PDFs escaneados, extrair dados do cliente e gerar peticoes em DOCX/PDF a partir do modelo usado pela operacao.',
     problem:
-      'Processos jurídicos com leitura manual de documentos consomem tempo, geram retrabalho e aumentam o risco de erro humano.',
+      'Equipes juridicas perdem tempo ao ler documentos manualmente, copiar dados para modelos e revisar campos sensiveis em fluxos repetitivos de peticionamento.',
     solution:
-      'Criei um fluxo de OCR que extrai informações relevantes, organiza dados e apoia a geração automática de petições/documentos.',
+      'Desenvolvi um pipeline com OCR, extracao de campos, validacao de CPF/contato/endereco/pedido, integracao com Google Drive e preenchimento automatico de templates para gerar DOCX e PDF finais.',
     impact:
-      'Ajuda a transformar documentos brutos em informações utilizáveis mais rápido, liberando tempo para análise e revisão especializada.',
+      'O sistema reduz retrabalho operacional, melhora a padronizacao dos documentos e deixa a equipe focada na revisao juridica em vez da digitacao e montagem manual.',
     image: '/images/docgen-project.webp',
-    tags: ['Python', 'OCR', 'Web API'],
-    liveUrl: 'https://leitor-ocr.fly.dev/',
-    githubUrl: 'https://github.com/Cesare221/DOCGEN_PROJECT/tree/main',
+    tags: ['Python', 'OCR', 'Google Drive', 'DOCX/PDF', 'Automacao Juridica'],
+    liveUrl: 'https://advocacia-pipeline-main.fly.dev/',
+    githubUrl: '',
   },
   {
     id: 3,
-    title: 'Bolão da UCT - Gestão de Palpites',
+    title: 'Leitor Seguro OCR',
+    description:
+      'Sistema web para leitura de listas de presenca em PDF ou imagem, com extracao estruturada para XLSX e identificacao de presenca, rubricas e manuscritos.',
+    problem:
+      'Conferir listas de presenca manualmente toma tempo, dificulta auditoria e gera retrabalho quando ha campos manuscritos ou arquivos em volume.',
+    solution:
+      'Desenvolvi um pipeline hibrido com Gemini como leitura principal e Document AI como fallback por pagina, convertendo PDFs e imagens em planilhas organizadas com status de presenca e texto manuscrito tratado.',
+    impact:
+      'O sistema reduz o trabalho operacional de digitalizacao, melhora a rastreabilidade da execucao e entrega saida pronta para conferencia e uso em Excel.',
+    image: '/images/leitor-ocr-card.png',
+    tags: ['Python', 'OCR', 'Gemini', 'Document AI', 'XLSX'],
+    liveUrl: 'https://leitor-ocr.fly.dev/',
+    githubUrl: 'https://github.com/Cesare221/Leitor_OCR',
+  },
+  {
+    id: 4,
+    title: 'Bolao da UCT - Gestao de Palpites',
     description:
       'Plataforma web para centralizar palpites, jogos, placares e ranking em tempo real para uma equipe interna.',
     problem:
-      'O controle manual de palpites e rankings dificulta transparência, atualização rápida e engajamento dos participantes.',
+      'O controle manual de palpites e rankings dificulta transparencia, atualizacao rapida e engajamento dos participantes.',
     solution:
-      'Implementei uma interface responsiva com dashboard, controle de jogos, atualização de placares e ranking calculado automaticamente.',
+      'Implementei uma interface responsiva com dashboard, controle de jogos, atualizacao de placares e ranking calculado automaticamente.',
     impact:
-      'Torna a experiência mais organizada e confiável, com acompanhamento visual dos resultados e menos trabalho manual de administração.',
+      'Torna a experiencia mais organizada e confiavel, com acompanhamento visual dos resultados e menos trabalho manual de administracao.',
     image: '/images/bolao-project.webp',
     imageFit: 'cover',
     tags: ['React', 'Realtime', 'Ranking'],
@@ -78,16 +94,16 @@ export const PROJECTS = [
     githubUrl: 'https://github.com/Cesare221/bolao-hemo',
   },
   {
-    id: 4,
-    title: 'MemoryDepo - Segundo Cérebro Pessoal',
+    id: 5,
+    title: 'MemoryDepo - Segundo Cerebro Pessoal',
     description:
-      'Aplicação web para capturar notas, ideias, links e trechos em um espaço pessoal com busca instantânea e organização por tipo.',
+      'Aplicacao web para capturar notas, ideias, links e trechos em um espaco pessoal com busca instantanea e organizacao por tipo.',
     problem:
-      'Ideias, referências e pequenos trechos úteis se perdem quando ficam espalhados entre abas, conversas, arquivos e anotações soltas.',
+      'Ideias, referencias e pequenos trechos uteis se perdem quando ficam espalhados entre abas, conversas, arquivos e anotacoes soltas.',
     solution:
-      'Criei um app React com captura rápida, filtros por categoria, busca instantânea, itens fixados, edição, cópia, exportação e importação em JSON.',
+      'Criei um app React com captura rapida, filtros por categoria, busca instantanea, itens fixados, edicao, copia, exportacao e importacao em JSON.',
     impact:
-      'Ajuda o usuário a transformar informações dispersas em um repositório pessoal consultável, leve e acessível direto pelo navegador.',
+      'Ajuda o usuario a transformar informacoes dispersas em um repositorio pessoal consultavel, leve e acessivel direto pelo navegador.',
     image: '/images/memorydepo-project.webp',
     imageFit: 'cover',
     tags: ['React', 'Vite', 'LocalStorage', 'UX'],
@@ -95,16 +111,16 @@ export const PROJECTS = [
     githubUrl: 'https://github.com/Cesare221/MemoryCard',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Life Dashboard - Meu Painel Pessoal',
     description:
-      'Painel pessoal para acompanhar hábitos, sono, água, passos, despesas e memória diária em uma interface leve e responsiva.',
+      'Painel pessoal para acompanhar habitos, sono, agua, passos, despesas e memoria diaria em uma interface leve e responsiva.',
     problem:
-      'Rotinas pessoais costumam ficar divididas entre aplicativos, planilhas e anotações, dificultando uma visão clara do dia e do progresso.',
+      'Rotinas pessoais costumam ficar divididas entre aplicativos, planilhas e anotacoes, dificultando uma visao clara do dia e do progresso.',
     solution:
-      'Desenvolvi um dashboard React com perfil, progresso do ano/mês/dia, hábitos, métricas de saúde, despesas e histórico salvo no navegador.',
+      'Desenvolvi um dashboard React com perfil, progresso do ano/mes/dia, habitos, metricas de saude, despesas e historico salvo no navegador.',
     impact:
-      'Entrega uma visão prática da rotina em um só lugar, ajudando o usuário a acompanhar consistência, gastos e indicadores pessoais sem login.',
+      'Entrega uma visao pratica da rotina em um so lugar, ajudando o usuario a acompanhar consistencia, gastos e indicadores pessoais sem login.',
     image: '/images/lifedashboard-project.webp',
     imageFit: 'cover',
     tags: ['React', 'Vite', 'Docker', 'Fly.io', 'LocalStorage'],
@@ -112,16 +128,16 @@ export const PROJECTS = [
     githubUrl: 'https://github.com/Cesare221/Life_control_dashboard',
   },
   {
-    id: 6,
-    title: 'Roleta de Decisão',
+    id: 7,
+    title: 'Roleta de Decisao',
     description:
-      'Aplicativo web para cadastrar opções, girar a roleta e deixar a sorte escolher com visual refinado e navegação leve.',
+      'Aplicativo web para cadastrar opcoes, girar a roleta e deixar a sorte escolher com visual refinado e navegacao leve.',
     problem:
-      'Escolhas rápidas e sorteios do dia a dia normalmente dependem de listas improvisadas ou interfaces genéricas, com pouca clareza visual e pouco engajamento.',
+      'Escolhas rapidas e sorteios do dia a dia normalmente dependem de listas improvisadas ou interfaces genericas, com pouca clareza visual e pouco engajamento.',
     solution:
-      'Criei uma experiência com roleta central animada, cadastro de opções, presets, histórico de sorteios e configurações para tornar o uso simples e envolvente.',
+      'Criei uma experiencia com roleta central animada, cadastro de opcoes, presets, historico de sorteios e configuracoes para tornar o uso simples e envolvente.',
     impact:
-      'O projeto transforma uma decisão casual em uma experiência memorável, combinando usabilidade, apelo visual e feedback imediato durante a interação.',
+      'O projeto transforma uma decisao casual em uma experiencia memoravel, combinando usabilidade, apelo visual e feedback imediato durante a interacao.',
     image: '/images/roulette-project.webp',
     imageFit: 'cover',
     tags: ['React', 'Vite', 'Interactive UI', 'Animation'],
@@ -131,7 +147,7 @@ export const PROJECTS = [
 ];
 
 export const NAV_LINKS = [
-  { name: 'Início', href: '#inicio' },
+  { name: 'Inicio', href: '#inicio' },
   { name: 'Sobre', href: '#sobre' },
   { name: 'Stack', href: '#stack' },
   { name: 'Projetos', href: '#projetos' },

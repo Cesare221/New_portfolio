@@ -130,8 +130,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\src\\data\\portfolio.js": {
-    "mtime": 1782937461.332664,
-    "ast_hash": "f39ae9636ceb33121655301cf759e04f",
+    "mtime": 1782939016.3062098,
+    "ast_hash": "b56194d33034dec8db8d3a9328844549",
     "semantic_hash": ""
   },
   "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\src\\data\\siteMeta.js": {
@@ -312,6 +312,16 @@
   "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\public\\images\\roulette-project.webp": {
     "mtime": 1782937286.278795,
     "ast_hash": "3a1c4d2361bc10351a2352f53650cb63",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\public\\images\\funcionalimg.png": {
+    "mtime": 1782870978.0237324,
+    "ast_hash": "c1f5b2effd8ebd6880f4ffe25eeec89b",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Usuario\\Desktop\\PORTIF\u00d3LIO\\meu-portfolio\\public\\images\\leitor-ocr-card.png": {
+    "mtime": 1782938847.4180315,
+    "ast_hash": "57e8372eb0f3ce22ce957bcaecc0eace",
     "semantic_hash": ""
   }
 }
