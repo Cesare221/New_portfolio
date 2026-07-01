@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0ea5a9"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" rx="16" fill="#f8fafc" />
+  <rect x="28" y="28" width="1144" height="150" rx="10" fill="url(#g)" />
+  <text x="60" y="92" font-family="Inter, Arial, sans-serif" font-size="36" fill="#fff" font-weight="700">Bolão da UCT</text>
+  <text x="60" y="128" font-family="Inter, Arial, sans-serif" font-size="16" fill="#ecfeff">Gestão de Palpites • Jogos da Seleção • Ranking em tempo real</text>
+
+  <!-- Cards -->
+  <g fill="#fff">
+    <rect x="40" y="200" width="360" height="120" rx="12" fill="#ffffff" stroke="#e6e6e6" />
+    <rect x="420" y="200" width="360" height="120" rx="12" fill="#ffffff" stroke="#e6e6e6" />
+    <rect x="800" y="200" width="320" height="120" rx="12" fill="#ffffff" stroke="#e6e6e6" />
+  </g>
+
+  <!-- Small scoreboard -->
+  <g>
+    <rect x="40" y="340" width="360" height="200" rx="12" fill="#fff" stroke="#e6e6e6" />
+    <text x="60" y="380" font-family="Inter, Arial, sans-serif" font-size="20" fill="#0f172a">Próximo Jogo</text>
+    <text x="60" y="420" font-family="Inter, Arial, sans-serif" font-size="28" fill="#0f172a">BR  vs  ?</text>
+    <rect x="440" y="340" width="360" height="200" rx="12" fill="#fff" stroke="#e6e6e6" />
+    <text x="460" y="380" font-family="Inter, Arial, sans-serif" font-size="20" fill="#0f172a">Ranking Geral</text>
+    <text x="460" y="420" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">1. Adrianne — 3 pts</text>
+    <text x="460" y="448" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">2. Stefany — 2 pts</text>
+  </g>
+
+  <g transform="translate(40,570)">
+    <rect width="1144" height="80" rx="12" fill="#111827" opacity="0.06" />
+    <text x="20" y="44" font-family="Inter, Arial, sans-serif" font-size="18" fill="#0f172a">Plataforma web desenvolvida para centralizar palpites, controlar jogos da seleção, atualizar placares e calcular ranking automaticamente.</text>
+  </g>
+</svg>

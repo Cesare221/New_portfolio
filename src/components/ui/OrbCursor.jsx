@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
 const OrbCursor = () => {
   const cursorRef = useRef(null);
   const followerRef = useRef(null);
-  const [isHoveringLink, setIsHoveringLink] = useState(false);
 
   useGSAP(() => {
     const cursor = cursorRef.current;
@@ -29,9 +28,8 @@ const OrbCursor = () => {
     };
 
     const handleMouseEnter = () => {
-      setIsHoveringLink(true);
       gsap.to(follower, {
-        scale: 1.5,
+        scale: 1.18,
         duration: 0.3,
         ease: 'power2.out',
       });
@@ -43,7 +41,6 @@ const OrbCursor = () => {
     };
 
     const handleMouseLeave = () => {
-      setIsHoveringLink(false);
       gsap.to(follower, {
         scale: 1,
         duration: 0.3,

@@ -63,8 +63,8 @@ export default {
 
       // ── Typography ────────────────────────────────────────────────────
       fontFamily: {
-        display: ['"DM Sans"', '"Copernicus"', '"Tiempos Headline"', 'Georgia', 'serif'],
-        sans:    ['"DM Sans"', '"StyreneB"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+        display: ['"Space Grotesk"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        sans:    ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
         mono:    ['"JetBrains Mono"', '"Fira Code"', 'monospace'],
       },
 
