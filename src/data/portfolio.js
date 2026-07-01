@@ -111,6 +111,23 @@ export const PROJECTS = [
     liveUrl: 'https://meu-painel-pessoal.fly.dev/',
     githubUrl: 'https://github.com/Cesare221/Life_control_dashboard',
   },
+  {
+    id: 6,
+    title: 'Roleta de Decisão',
+    description:
+      'Aplicativo web para cadastrar opções, girar a roleta e deixar a sorte escolher com visual refinado e navegação leve.',
+    problem:
+      'Escolhas rápidas e sorteios do dia a dia normalmente dependem de listas improvisadas ou interfaces genéricas, com pouca clareza visual e pouco engajamento.',
+    solution:
+      'Criei uma experiência com roleta central animada, cadastro de opções, presets, histórico de sorteios e configurações para tornar o uso simples e envolvente.',
+    impact:
+      'O projeto transforma uma decisão casual em uma experiência memorável, combinando usabilidade, apelo visual e feedback imediato durante a interação.',
+    image: '/images/roulette-project.webp',
+    imageFit: 'cover',
+    tags: ['React', 'Vite', 'Interactive UI', 'Animation'],
+    liveUrl: 'https://roulette-beta-eight.vercel.app/',
+    githubUrl: '',
+  },
 ];
 
 export const NAV_LINKS = [

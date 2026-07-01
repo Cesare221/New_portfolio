@@ -610,7 +610,7 @@
       "label": "SectionHeader()",
       "file_type": "code",
       "source_file": "src/components/ProjectCard.jsx",
-      "source_location": "L109",
+      "source_location": "L107",
       "id": "components_projectcard_sectionheader",
       "community": 6,
       "norm_label": "sectionheader()"
@@ -619,7 +619,7 @@
       "label": "Section()",
       "file_type": "code",
       "source_file": "src/components/ProjectCard.jsx",
-      "source_location": "L132",
+      "source_location": "L130",
       "id": "components_projectcard_section",
       "community": 6,
       "norm_label": "section()"
@@ -871,7 +871,7 @@
       "label": "NAV_LINKS",
       "file_type": "code",
       "source_file": "src/data/portfolio.js",
-      "source_location": "L116",
+      "source_location": "L133",
       "id": "data_portfolio_nav_links",
       "community": 5,
       "norm_label": "nav_links"
@@ -2069,9 +2069,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_components_projectcarousel_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_projectcarousel_jsx"
     },
     {
       "relation": "imports_from",
@@ -2386,9 +2386,9 @@
       "source_file": "src/components/index.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_index_js",
-      "target": "src_components_projectcarousel_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_projectcarousel_jsx"
     },
     {
       "relation": "re_exports",
@@ -2419,9 +2419,9 @@
       "source_file": "src/components/ProjectCard.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_projectcard_jsx",
-      "target": "src_components_ui_spotlight_card_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_ui_spotlight_card_jsx"
     },
     {
       "relation": "imports",
@@ -2430,9 +2430,9 @@
       "source_file": "src/components/ProjectCard.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_projectcard_jsx",
-      "target": "ui_spotlight_card_spotlightcard",
-      "confidence_score": 1.0
+      "target": "ui_spotlight_card_spotlightcard"
     },
     {
       "relation": "contains",
@@ -2471,9 +2471,9 @@
       "source_file": "src/components/ProjectCarousel.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_projectcarousel_jsx",
-      "target": "src_components_projectcard_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_projectcard_jsx"
     },
     {
       "relation": "contains",
@@ -2501,9 +2501,9 @@
       "source_file": "src/components/ProjectCarousel.jsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_projectcarousel_jsx",
-      "target": "components_projectcarousel_projectcarousel",
-      "confidence_score": 1.0
+      "target": "components_projectcarousel_projectcarousel"
     },
     {
       "relation": "contains",
@@ -2757,9 +2757,9 @@
       "source_file": "src/components/ui/spotlight-card.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_ui_spotlight_card_jsx",
-      "target": "ui_spotlight_card_glow_colors",
-      "confidence_score": 1.0
+      "target": "ui_spotlight_card_glow_colors"
     },
     {
       "relation": "contains",
@@ -2767,9 +2767,9 @@
       "source_file": "src/components/ui/spotlight-card.jsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_ui_spotlight_card_jsx",
-      "target": "ui_spotlight_card_spotlightcard",
-      "confidence_score": 1.0
+      "target": "ui_spotlight_card_spotlightcard"
     },
     {
       "relation": "contains",
@@ -3397,5 +3397,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ddf80b41d0b813a2186984bd3a81f50794b2007c"
+  "built_at_commit": "2a9a92b75aeb47416e65ffe3dc8e852c54bc520c"
 }
