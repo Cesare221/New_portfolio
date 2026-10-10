@@ -15,11 +15,13 @@
 
 /* Dark mode: superfícies realmente escuras, tom azul-escuro profundo estilo antigravity */
 .dark {
-  --background: 244 20% 5%; /* #08070c */
-  --foreground: 240 10% 98%; /* #faf9f5 */
-  --card: 244 14% 9%;    /* #0f0e17 */
-  --cta: 224 86% 56%;       /* #2563eb */
-  --muted: 240 5% 74%;     /* #bdbcbd */
+  --background: 0 0% 4%; /* #08070c */
+  --foreground: 0 0% 96%; /* #faf9f5 */
+  --card: 0 0% 8%;    /* #0f0e17 */
+  --cta: 0 75% 40%;
+  --highlight: 0 90% 70%;
+  --brand: 0 85% 55%;
+  --muted: 0 0% 74%;     /* #bdbcbd */
   color-scheme: dark;
 }
 
@@ -237,15 +239,4 @@ html.lenis {
 }
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
-}
-
-/* ── Antigravity Canvas ──────────────────────────────────────────── */
-#antigravity-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 0;
 }

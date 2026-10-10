@@ -38,7 +38,7 @@ export default function ProjectCard({
       </div>
 
       <div className="flex flex-grow flex-col p-xl">
-        <h3 className="mb-3 font-display text-[20px] font-medium leading-snug tracking-[-0.01em] text-foreground transition-colors duration-200 group-hover:text-cta">
+        <h3 className="mb-3 font-display text-[20px] font-medium leading-snug tracking-[-0.01em] text-foreground transition-colors duration-200 group-hover:text-highlight">
           {title}
         </h3>
 
@@ -53,7 +53,7 @@ export default function ProjectCard({
             ["Impacto", impact],
           ].map(([label, value]) => (
             <div key={label}>
-              <dt className="text-[11px] font-semibold uppercase tracking-[0.12em] text-cta">
+              <dt className="text-[11px] font-semibold uppercase tracking-[0.12em] text-highlight">
                 {label}
               </dt>
               <dd className="mt-1 text-body-sm leading-relaxed text-muted">

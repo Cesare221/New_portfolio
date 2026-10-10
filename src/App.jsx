@@ -1,9 +1,10 @@
-import { Suspense, lazy, useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { ReactLenis } from 'lenis/react';
 import 'lenis/dist/lenis.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import Hero from './components/Hero.jsx';
 import {
   FaReact, FaNodeJs, FaHtml5, FaCss3Alt,
   FaGitAlt, FaPython, FaGithub, FaLinkedin,
@@ -18,17 +19,14 @@ import { Menu, X, ArrowUpRight, Copy, Check } from 'lucide-react';
 import { Section } from './components/ProjectCard.jsx';
 import ProjectCarousel from './components/ProjectCarousel.jsx';
 import { TechMarquee }            from './components/ui/tech-marquee.jsx';
-import { LightPullThemeSwitcher } from './components/ui/light-pull-theme-switcher.jsx';
 import OrbCursor                  from './components/ui/OrbCursor.jsx';
 import { NAV_LINKS, PERSONAL, PROJECTS, TECH_STACK } from './data/portfolio.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const AntigravityBackground = lazy(() => import('./components/ui/AntigravityBackground.jsx'));
-
-// ─────────────────────────────────────────────────────────────────────
+// -----
 // DATA
-// ─────────────────────────────────────────────────────────────────────
+// -----
 
 const TECH_ICONS = {
   javascript: <SiJavascript size={18} color="#F7DF1E" />,
@@ -54,13 +52,6 @@ const techStackWithIcons = TECH_STACK.map((item) => ({
 // ─────────────────────────────────────────────────────────────────────
 // APP
 // ─────────────────────────────────────────────────────────────────────
-function initTheme() {
-  const saved = localStorage.getItem('portfolio-theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const isDark = saved === 'dark' || (!saved && prefersDark);
-  if (isDark) document.documentElement.classList.add('dark');
-  return isDark;
-}
 
 function usePrefersReducedMotion() {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(() => (
@@ -81,7 +72,6 @@ function usePrefersReducedMotion() {
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isDark, setIsDark] = useState(() => typeof window !== 'undefined' ? initTheme() : false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('inicio');
   const [copied, setCopied] = useState(false);
@@ -90,16 +80,6 @@ export default function App() {
   const containerRef  = useRef(null);
 
   // Sync theme class + localStorage
-  useEffect(() => {
-    const html = document.documentElement;
-    if (isDark) {
-      html.classList.add('dark');
-    } else {
-      html.classList.remove('dark');
-    }
-    localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light');
-  }, [isDark]);
-
   useEffect(() => {
     if (!menuOpen) return undefined;
 
@@ -110,8 +90,6 @@ export default function App() {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [menuOpen]);
-
-  const toggleTheme = () => setIsDark((v) => !v);
 
   // GSAP — scroll reveals + header + active section
   useGSAP(() => {
@@ -189,26 +167,10 @@ export default function App() {
         ref={containerRef}
         className={`min-h-screen ${bgCanvas} text-foreground font-sans relative overflow-x-hidden transition-colors duration-350`}
       >
-        {/* Canvas overlays */}
-        {!prefersReducedMotion && (
-          <>
-            <OrbCursor />
-            <Suspense fallback={null}>
-              <AntigravityBackground
-                theme={isDark ? 'dark' : 'light'}
-                density={95}
-                opacity={isDark ? 0.42 : 0.28}
-                particlesScale={0.42}
-                ringWidth={0.1}
-                ringWidth2={0.035}
-                ringDisplacement={0.08}
-              />
-            </Suspense>
-          </>
-        )}
-        {/* ══════════════════════════════════════════════
-            HEADER
-        ══════════════════════════════════════════════ */}
+      {/* Cursor Decorativo */}
+      {!prefersReducedMotion && <OrbCursor />}
+
+      {/* HEADER */}
         <header className={`fixed top-0 left-0 w-full z-40 transition-transform duration-300 ${scrolled ? '-translate-y-full' : 'translate-y-0'}`}>
           <div className="mx-auto w-full px-3 sm:px-5 lg:px-8 xl:px-12">
             <div className={`mt-5 flex items-center justify-between h-[76px] bg-background/65 border ${borderDim} backdrop-blur-lg rounded-2xl px-5 sm:px-7 shadow-sm shadow-black/5 dark:shadow-black/20`}>
@@ -249,16 +211,10 @@ export default function App() {
                 >
                   Fale Comigo
                 </button>
-                <div className={`flex h-11 w-11 items-center justify-center rounded-lg border ${borderDim} bg-card/45 backdrop-blur-md`}>
-                  <LightPullThemeSwitcher compact isDark={isDark} onToggle={toggleTheme} />
-                </div>
               </div>
 
               {/* Mobile controls */}
               <div className="md:hidden flex items-center gap-2">
-                 <div className={`flex h-10 w-10 items-center justify-center rounded-lg border ${borderDim} bg-card/45 backdrop-blur-md`}>
-                  <LightPullThemeSwitcher compact isDark={isDark} onToggle={toggleTheme} />
-                </div>
                  <button
                   onClick={() => setMenuOpen(!menuOpen)}
                   className="p-3 text-muted hover:text-foreground"
@@ -292,80 +248,10 @@ export default function App() {
         </header>
 
         <main>
-          {/* ══════════════════════════════════════════════
+          {/* ═════════
               HERO
-          ══════════════════════════════════════════════ */}
-          <section
-            id="inicio"
-            className="relative flex flex-col justify-center items-center text-center min-h-[calc(100dvh-64px)] pt-32 pb-section px-4"
-          >
-            {/* Decoração sutil de fundo */}
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-0 overflow-hidden"
-            >
-              <div className="absolute -top-24 right-1/4 w-[640px] h-[640px] rounded-full bg-cta/[0.04] dark:bg-cta/[0.06] blur-3xl" />
-              <div className="absolute bottom-0 -left-32 w-[480px] h-[480px] rounded-full bg-accent-amber/[0.03] dark:bg-accent-amber/[0.04] blur-3xl" />
-            </div>
-
-            <div className="relative max-w-4xl mx-auto w-full">
-              {/* Eyebrow - Glassmorphic Capsule Badge com Pulsing Dot */}
-              <div className="hero-sub mb-8 text-center flex justify-center">
-                <span className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-pill text-[11px] font-bold uppercase tracking-[0.14em] bg-card/70 dark:bg-white/[0.02] border ${borderDim} text-muted/95 backdrop-blur-md`}>
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                  </span>
-                  Disponível para novos projetos
-                </span>
-              </div>
-
-              {/* Display headline - Space Grotesk premium typography */}
-              <h1
-                aria-label={PERSONAL.name}
-                className="font-display font-extrabold tracking-[-0.03em] leading-[0.95] text-balance"
-                style={{ fontSize: 'clamp(3rem, 8.5vw, 6.2rem)' }}
-              >
-                <span className="block overflow-hidden">
-                  <span className="hero-word inline-block text-foreground">Cesar</span>
-                </span>
-                <span className="block overflow-hidden">
-                  <span className="hero-word inline-block text-transparent bg-clip-text bg-gradient-to-r from-cta to-indigo-500 dark:from-cta dark:to-cyan-400">
-                    Delmondes
-                  </span>
-                </span>
-              </h1>
-
-              {/* Role + Bio - High readability & spacing */}
-              <div className="mt-8 max-w-2xl mx-auto space-y-4">
-                <p className="hero-sub font-display text-sm font-semibold tracking-[0.16em] uppercase text-cta">
-                  {PERSONAL.role}
-                </p>
-                <p className="hero-sub text-body-md sm:text-title-sm leading-relaxed text-muted mt-4 max-w-xl mx-auto">
-                  {PERSONAL.bio}
-                </p>
-              </div>
-
-              {/* CTAs - Hover lift, Glow shadow, cursor:pointer */}
-              <div className="hero-sub flex flex-wrap gap-4 mt-12 justify-center">
-                <button
-                  onClick={() => scrollTo('#projetos')}
-                  className="group inline-flex items-center gap-2.5 h-12 px-7 rounded-lg bg-cta text-white text-sm font-semibold transition-all duration-300 hover:shadow-[0_0_25px_rgba(37,99,235,0.4)] hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
-                >
-                  Ver Projetos
-                  <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </button>
-                <a
-                  href={PERSONAL.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`inline-flex items-center h-12 px-7 rounded-lg border ${borderDim} bg-white/[0.02] dark:bg-white/[0.01] hover:bg-card/90 text-foreground text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer backdrop-blur-sm`}
-                >
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </section>
+          ═════════ */}
+          <Hero borderDim={borderDim} scrollTo={scrollTo} />
 
           {/* ══════════════════════════════════════════════
               SOBRE
@@ -380,7 +266,7 @@ export default function App() {
                 <span className="eyebrow justify-center">Quem sou eu</span>
                 <h2 className="mt-4 font-display font-normal text-display-md sm:text-display-lg tracking-[-0.02em] text-balance">
                   Desenvolvedor com foco em{' '}
-                  <em className="not-italic text-cta">resultado</em>
+                  <em className="not-italic text-highlight">resultado</em>
                 </h2>
               </div>
 
@@ -400,7 +286,7 @@ export default function App() {
                 {/* Texto */}
                 <div className="md:col-span-3 space-y-5">
                   <p className="font-display font-normal text-display-sm leading-snug tracking-[-0.01em]">
-                    Minha missão é criar soluções digitais que funcionam bem <em className="not-italic text-cta">e</em> comunicam com clareza.
+                    Minha missão é criar soluções digitais que funcionam bem <em className="not-italic text-highlight">e</em> comunicam com clareza.
                   </p>
                   <p className="text-body-md text-muted leading-relaxed">
                     Com base sólida em <strong className="font-medium text-foreground">JavaScript, React e Node.js</strong>, busco as melhores práticas para construir aplicações robustas, rápidas e bem estruturadas — do backend à interface.

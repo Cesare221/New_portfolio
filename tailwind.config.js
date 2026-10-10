@@ -31,13 +31,18 @@ export default {
         },
 
         // Call to Action
-        cta: '#2563EB',
+        cta: 'hsl(var(--cta) / <alpha-value>)',
+        highlight: 'hsl(var(--highlight) / <alpha-value>)',
+        brand: 'hsl(var(--brand) / <alpha-value>)',
+        background: 'hsl(var(--background) / <alpha-value>)',
+        foreground: 'hsl(var(--foreground) / <alpha-value>)',
+        card: 'hsl(var(--card) / <alpha-value>)',
 
         // Text
         ink:           '#141413',
         'body-strong': '#252523',
         body:          '#3d3d3a',
-        muted:         '#6c6a64',
+        muted:         'hsl(var(--muted) / <alpha-value>)',
         'muted-soft':  '#8e8b82',
 
         // Borders
