@@ -5,6 +5,7 @@ const GLOW_COLORS = {
   purple: { base: 265, spread: 36 },
   green: { base: 150, spread: 28 },
   orange: { base: 34, spread: 26 },
+  red: { base: 0, spread: 0},
 };
 
 export function SpotlightCard({

@@ -139,7 +139,7 @@ export default {
 
       // ── Max width ────────────────────────────────────────────────────
       maxWidth: {
-        'content': '1200px',
+        'content': '1440px',
       },
     },
   },

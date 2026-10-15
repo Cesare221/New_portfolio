@@ -1,8 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 import { ArrowUpRight } from "lucide-react";
 
-import { SpotlightCard } from "./ui/spotlight-card.jsx";
-
 // ProjectCard
 export default function ProjectCard({
   title,
@@ -11,47 +9,54 @@ export default function ProjectCard({
   solution,
   impact,
   image,
-  imageFit = "cover",
+  imageFit = "contain",
   tags = [],
   githubUrl = "",
-  liveUrl = "#",
+  liveUrl = "",
+  demoAvailable = true,
 }) {
   const isContainedImage = imageFit === "contain";
   const hasGithubUrl = Boolean(githubUrl);
+  const hasLiveUrl = Boolean(liveUrl && liveUrl !== "#");
 
   return (
-    <SpotlightCard
-      as="article"
-      glowColor="blue"
-      className="group flex h-full w-full flex-col overflow-hidden rounded-xl border border-hairline bg-[hsl(var(--card)/0.98)] shadow-[0_12px_40px_rgba(15,23,42,0.08)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cta/35 hover:shadow-[0_18px_58px_rgba(15,23,42,0.14)] dark:border-white/12 dark:bg-[hsl(var(--card)/0.96)] dark:shadow-[0_18px_55px_rgba(0,0,0,0.38)] dark:hover:shadow-[0_22px_70px_rgba(0,0,0,0.5)]"
-    >
-      <div className={`relative h-56 overflow-hidden ${isContainedImage ? "bg-[#071017]" : "bg-background"}`}>
+    <article
+      className="grid min-w-0 grid-cols-1 gap-6 py-8 first:pt-0 lg:grid-cols-5 lg:items-center lg:gap-10 lg:py-9">
+      <div className="relative aspect-video min-w-0 overflow-hidden rounded-lg border border-white/10 bg-card lg:col-span-3">
         <img
           src={image}
-          alt={title}
+          alt={`Visão geral do projeto ${title}`}
           loading="lazy"
-          className={`h-full w-full transition-transform duration-700 group-hover:scale-105 ${isContainedImage ? "object-contain p-3" : "object-cover"}`}
+          decoding="async"
+          className={`h-full w-full ${isContainedImage ? "object-contain p-3" : "object-cover"}`}
         />
         {!isContainedImage && (
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
         )}
       </div>
 
-      <div className="flex flex-grow flex-col p-xl">
-        <h3 className="mb-3 font-display text-[20px] font-medium leading-snug tracking-[-0.01em] text-foreground transition-colors duration-200 group-hover:text-highlight">
+      <div className="min-w-0 lg:col-span-2">
+        <h3 className="mb-4 font-display text-2xl font-semibold leading-tight tracking-tight text-foreground sm:text-3xl">
           {title}
         </h3>
 
-        <p className="mb-5 text-body-sm leading-relaxed text-muted">
+        <p className="mb-5 text-body-md leading-relaxed text-muted">
           {description}
         </p>
+        
+        <details className="mb-6">
+          <summary aria-label={`Detalhes do projeto ${title}`} className="cursor-pointer py-2 text-body-sm font-medium text-highlight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">
+            Detalhes do projeto
+          </summary>
 
-        <dl className="mb-6 flex-grow space-y-3">
+        <dl className="mt-3 space-y-3">
           {[
             ["Problema", problem],
             ["Solução", solution],
             ["Impacto", impact],
-          ].map(([label, value]) => (
+          ]
+            .filter(([, value]) => Boolean(value?.trim()))
+            .map(([label, value]) => (
             <div key={label}>
               <dt className="text-[11px] font-semibold uppercase tracking-[0.12em] text-highlight">
                 {label}
@@ -62,63 +67,72 @@ export default function ProjectCard({
             </div>
           ))}
         </dl>
+        </details>
 
         <div className="mb-6 flex flex-wrap gap-2">
           {tags.map((tag) => (
             <span
               key={tag}
-              className="inline-flex items-center rounded-pill border border-hairline bg-background px-2.5 py-1 text-caption font-medium text-muted"
+              className="inline-flex items-center rounded-pill border border-white/10 bg-background px-2.5 py-1 text-caption font-medium text-muted"
             >
               {tag}
             </span>
           ))}
         </div>
 
-        <div className="flex items-center gap-5 border-t border-hairline pt-4">
+        <div className="flex flex-wrap items-center gap-4">
           {hasGithubUrl && (
             <a
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Ver código do projeto ${title}`}
-              className="flex items-center gap-1.5 text-body-sm font-medium text-muted transition-colors duration-200 hover:text-foreground"
+              className="inline-flex min-h-11 items-center gap-2 text-body-sm font-medium text-muted transition-colors hover:text-foreground"
             >
               <FaGithub size={15} />
               Código
             </a>
           )}
-          <a
-            href={liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Acessar projeto ${title}`}
-            className="flex items-center gap-1.5 text-body-sm font-medium text-muted transition-colors duration-200 hover:text-foreground"
-          >
-            <ArrowUpRight size={15} />
-            Acessar
+          {demoAvailable && hasLiveUrl ? (
+            <a
+              href={liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Acessar projeto ${title}`}
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-cta px-5 py-2 text-body-sm font-semibold text-white transition-opacity hover:opacity-90"
+              >
+              <ArrowUpRight size={15} />
+              Acessar
           </a>
+        ) : (
+          <span className="text-body-sm text-muted">
+            {demoAvailable
+              ? "Demonstração não disponível"
+              : "Demo temporariamente indisponível"}
+          </span>
+        )}
         </div>
       </div>
-    </SpotlightCard>
+    </article>
   );
 }
 
 // SectionHeader
 export function SectionHeader({ eyebrow, title, subtitle, center = true }) {
   return (
-    <div className={`mb-16 ${center ? "text-center" : ""}`}>
+    <div className={`mb-9 ${center ? "text-center" : ""}`}>
       {eyebrow && (
         <span className={`eyebrow ${center ? "justify-center" : ""}`}>
           {eyebrow}
         </span>
       )}
       {title && (
-        <h2 className="mt-4 font-display text-display-md font-normal text-balance text-foreground sm:text-display-lg">
+        <h2 className="mt-4 font-display text-3xl font-semibold text-balance text-foreground sm:text-4xl">
           {title}
         </h2>
       )}
       {subtitle && (
-        <p className="mx-auto mt-4 max-w-2xl text-body-md text-balance text-muted">
+        <p className={`mt-4 max-w-2xl text-body-md text-balance text-muted ${center ? 'mx-auto' : ''}`}>
           {subtitle}
         </p>
       )}
@@ -127,12 +141,17 @@ export function SectionHeader({ eyebrow, title, subtitle, center = true }) {
 }
 
 // Section
-export function Section({ id, eyebrow, title, subtitle, children, className = "", bg = "" }) {
+export function Section({ id, eyebrow, title, subtitle, children, className = "", bg = "", center = true, }) {
   return (
-    <section id={id} className={`py-section gsap-reveal ${bg} ${className}`}>
+    <section id={id} className={`py-14 sm:py-16 gsap-reveal ${bg} ${className}`}>
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         {(eyebrow || title) && (
-          <SectionHeader eyebrow={eyebrow} title={title} subtitle={subtitle} />
+          <SectionHeader
+            eyebrow={eyebrow}
+            title={title}
+            subtitle={subtitle}
+            center={center}
+          />
         )}
         {children}
       </div>

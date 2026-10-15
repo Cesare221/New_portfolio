@@ -1,89 +1,142 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Pause, Play } from "lucide-react";
 import { PERSONAL } from "../data/portfolio.js";
+import MatrixRain from "./ui/matrix-rain.jsx";
 
-export default function Hero({ borderDim, scrollTo}){
-    return (
-        <section
-            id="inicio"
-            className="relative mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-12 px-6 pb-20 pt-36 lg:min-h-screen lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-12"
+export default function Hero({ borderDim, matrixPaused, onToggleMatrix, showMotionControl }) {
+  return (
+    <section
+      id="inicio"
+      className="relative isolate border-b border-white/10 bg-background"
+    >
+      <div aria-hidden="true" className="hero-matrix-backdrop">
+        {['left', 'right'].map((side) => (
+          <MatrixRain
+            key={side}
+            className={`hero-matrix hero-matrix--${side}`}
+            background="#0a0a0a"
+            color="#ef3434"
+            highlight="#ff7777"
+            fontSize={16}
+            density={0.5}
+            speed={0.3}
+            glow={2}
+            trail={0.86}
+            paused={matrixPaused}
+          />
+        ))}
+      </div>
+      <div className="relative z-10 mx-auto grid max-w-content grid-cols-1 items-center gap-6 px-4 pb-10 pt-28 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:gap-4 lg:px-8 lg:pb-12 lg:pt-28">
+        {/* Apresentação */}
+        <div className="relative z-10 min-w-0">
+          <p className="mb-6 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.12em] text-muted">
+            <span
+              aria-hidden="true"
+              className="h-px w-6 shrink-0 bg-brand"
+            />
+            <span className="sr-only">
+              Desenvolvedor de software
+            </span>
+            <span aria-hidden="true">
+              {"Desenvolvedor de software".split("").map((letter, index) => (
+                <span key={index} className="hero-letter">
+                  {letter}
+                </span>
+              ))}
+            </span>
+          </p>
+
+          <h1
+            aria-label={PERSONAL.name}
+            className="font-display text-[clamp(2.5rem,6vw,6rem)] font-extrabold uppercase leading-[0.95] tracking-[-0.04em]"
           >
-            <div className="relative min-w-0 w-full text-left lg:col-start-2 lg:row-start-1 lg:text-right">
-            
-              {/* Eyebrow - Glassmorphic Capsule Badge com Pulsing Dot */}
-              <div className="hero-sub mb-8 flex justify-start lg:justify-end">
-                <span className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-pill text-[11px] font-bold uppercase tracking-[0.14em] bg-card/70 dark:bg-white/[0.02] border ${borderDim} text-muted/95 backdrop-blur-md`}>
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                  </span>
-                  Disponível para novos projetos
-                </span>
-              </div>
+            <span className="block overflow-hidden">
+              <span className="hero-word inline-block text-foreground">
+                {PERSONAL.firstName}
+              </span>
+            </span>
 
-              {/* Display headline - Space Grotesk premium typography */}
-              <h1
-                aria-label={PERSONAL.name}
-                className="font-display font-extrabold tracking-[-0.03em] leading-[0.95] text-balance"
-                style={{ fontSize: 'clamp(3rem, 7.5vw, 5.5rem)' }}
-              >
-                <span className="block overflow-hidden">
-                  <span className="hero-word inline-block text-foreground">Cesar</span>
-                </span>
-                <span className="block overflow-hidden">
-                  <span className="hero-word inline-block text-brand">
-                    Delmondes
-                  </span>
-                </span>
-              </h1>
+            <span className="block overflow-hidden">
+              <span className="hero-word inline-block text-brand">
+                {PERSONAL.lastname}
+              </span>
+            </span>
+          </h1>
 
-              {/* Role + Bio - High readability & spacing */}
-              <div className="mt-8 max-w-2xl mx-auto space-y-4">
-                <p className="hero-sub font-display text-sm font-semibold tracking-[0.16em] uppercase text-highlight">
-                  {PERSONAL.role}
-                </p>
-                <p className="hero-sub text-body-md sm:text-title-sm leading-relaxed text-muted mt-4 max-w-xl mx-auto">
-                  {PERSONAL.bio}
-                </p>
-              </div>
+          <p className="hero-sub mt-6 max-w-xl text-body-md font-medium leading-relaxed text-foreground">
+            {PERSONAL.role}
+          </p>
 
-              {/* CTAs - Hover lift, Glow shadow, cursor:pointer */}
-              <div className="hero-sub flex flex-wrap gap-4 mt-12 justify-start lg:justify-end">
-                <button
-                  onClick={() => scrollTo('#projetos')}
-                  className="group inline-flex items-center gap-2.5 h-12 px-7 rounded-lg bg-cta text-white text-sm font-semibold transition-all duration-300 hover:bg-cta/90 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
-                >
-                  Ver Projetos
-                  <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </button>
-                <a
-                  href={PERSONAL.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`inline-flex items-center h-12 px-7 rounded-lg border ${borderDim} bg-white/[0.02] dark:bg-white/[0.01] hover:bg-card/90 text-foreground text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer backdrop-blur-sm`}
-                >
-                  GitHub
-                </a>
-              </div>
-            </div>
-            <div className="min-w-0 lg:col-start-1 lg:row-start-1">
-                <p className="font-display text-3xl font-extrabold uppercase leading-none tracking-tight sm:text-7xl">
-                    Desenvolvedor 
-                    <br/>
-                    de Software
-                </p>
+          <p className="hero-sub mt-4 max-w-lg text-body-md leading-relaxed text-muted [text-wrap:pretty]">
+            Desenvolvo aplicações web, automações e integrações para resolver problemas reais.
+          </p>
 
-                <p className="mt-5 text-sm text-muted">
-                    Aplicações web • Automações • Integrações • APIs
-                </p>
-            <div className="mt-8 aspect-[4/3] overflow-hidden rounded-lg">
-                <img
-                    src="/images/aboutphoto.jpeg"
-                    alt="Cesar Delmondes"
-                    className="h-full w-full object-cover object-[center_35%]"
-                />
-            </div>
+          <div className="hero-actions mt-8 flex flex-wrap gap-3">
+            <a
+              href="#projetos"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-cta px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            >
+              Ver projetos
+              <ArrowUpRight size={16} aria-hidden="true" />
+            </a>
+
+            <a
+              href="#contato"
+              className={`inline-flex min-h-12 items-center justify-center rounded-lg border ${borderDim} px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-card`}
+            >
+              Entrar em contato
+            </a>
+          </div>
+
+          <div className="hero-sub mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs leading-relaxed text-muted">
+          <p className="flex items-center gap-2">
+            <span
+              aria-hidden="true"
+              className="h-2 w-2 shrink-0 rounded-full bg-emerald-500"
+            />
+            Disponível para novos projetos
+          </p>
+          {showMotionControl && (
+            <button
+              type="button"
+              aria-pressed={matrixPaused}
+              aria-label={matrixPaused ? 'Retomar animações de fundo' : 'Pausar animações de fundo'}
+              onClick={onToggleMatrix}
+              className="inline-flex min-h-11 items-center gap-2 rounded-md px-2 transition-colors hover:text-foreground"
+            >
+              {matrixPaused ? <Play size={12} aria-hidden="true" /> : <Pause size={12} aria-hidden="true" />}
+              {matrixPaused ? 'Retomar animação' : 'Pausar animação'}
+            </button>
+          )}
+          </div>
         </div>
-    </section>
-    );
-}
 
+        {/* Foto no ambiente de trabalho */}
+        <div className="relative isolate aspect-[4/3] w-full min-w-0 overflow-hidden">
+          <img
+            src={PERSONAL.heroPortrait.src}
+            width={PERSONAL.heroPortrait.width}
+            height={PERSONAL.heroPortrait.height}
+            alt={`${PERSONAL.name} em seu ambiente de trabalho`}
+            loading="eager"
+            fetchPriority="high"
+            className="h-full w-full object-cover object-center"
+          />
+
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"
+          />
+
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-y-0 left-0 hidden w-[15%] bg-gradient-to-r from-background to-transparent lg:block"
+          />
+          <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-[12%] bg-gradient-to-b from-background to-transparent" />
+          <p className="absolute bottom-5 right-4 border-l-2 border-brand pl-3 text-[10px] font-medium uppercase leading-relaxed tracking-[0.16em] text-foreground sm:right-6">
+            Tecnologia<br />Automação<br />Produtividade<br />Resultados
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
