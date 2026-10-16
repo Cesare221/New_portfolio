@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="290" viewBox="0 0 1200 290" role="img" aria-label="Cesar Delmondes — Código com propósito. Interfaces com identidade.">
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#ffffff" stroke-opacity=".045"/></pattern>
+  </defs>
+  <rect width="1200" height="290" rx="12" fill="#101318"/>
+  <rect x="800" width="400" height="290" fill="url(#grid)"/>
+  <path d="M0 0H1200" stroke="#ed4144" stroke-width="6"/>
+  <rect x="48" y="41" width="8" height="8" rx="2" fill="#f04448"/>
+  <text x="69" y="51" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="600" letter-spacing="3" fill="#bec5ce">CESAR DELMONDES / PORTFÓLIO</text>
+  <text x="46" y="126" font-family="Segoe UI,Arial,sans-serif" font-size="51" font-weight="700" letter-spacing="-1.5" fill="#f0f3f7">Código com propósito.</text>
+  <text x="46" y="186" font-family="Segoe UI,Arial,sans-serif" font-size="51" font-weight="700" letter-spacing="-1.5" fill="#f24b50">Interfaces com identidade.</text>
+  <text x="49" y="246" font-family="Segoe UI,Arial,sans-serif" font-size="15" letter-spacing="1" fill="#9ba6b5">DESENVOLVIMENTO WEB · AUTOMAÇÃO · INTEGRAÇÕES</text>
+  <circle cx="1030" cy="145" r="98" fill="none" stroke="#303741"/>
+  <circle cx="1030" cy="145" r="72" fill="none" stroke="#ed4144" stroke-opacity=".3"/>
+  <path d="M992 120L966 145L992 170M1067 120L1093 145L1067 170M1043 110L1016 180" fill="none" stroke="#ed4144" stroke-width="7" stroke-linecap="square"/>
+  <circle cx="1030" cy="47" r="5" fill="#ed4144"/>
+  <path d="M1138 236h18m-9-9v18M906 61h14m-7-7v14" stroke="#6c7685" stroke-width="1.5"/>
+</svg>
