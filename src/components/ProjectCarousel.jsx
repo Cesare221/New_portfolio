@@ -36,9 +36,12 @@ export default function ProjectCarousel({ projects = [] }) {
     if (!node) return;
 
     const scrollAmount = Math.min(node.clientWidth * 0.86, 920);
+    const reduceMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
     node.scrollBy({
       left: direction === 'left' ? -scrollAmount : scrollAmount,
-      behavior: 'smooth',
+      behavior: reduceMotion ? 'instant' : 'smooth',
     });
   };
 
@@ -52,7 +55,7 @@ export default function ProjectCarousel({ projects = [] }) {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="flex min-w-[min(88vw,360px)] snap-start md:min-w-[calc((100%_-_20px)/2)] lg:min-w-[calc((100%_-_40px)/3)]"
+            className="flex min-w-0 shrink-0 basis-[85%] snap-start md:basis-[calc((100%_-_20px)/2)]"
           >
             <ProjectCard {...project} />
           </div>

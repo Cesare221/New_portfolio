@@ -15,11 +15,13 @@
 
 /* Dark mode: superfícies realmente escuras, tom azul-escuro profundo estilo antigravity */
 .dark {
-  --background: 244 20% 5%; /* #08070c */
-  --foreground: 240 10% 98%; /* #faf9f5 */
-  --card: 244 14% 9%;    /* #0f0e17 */
-  --cta: 224 86% 56%;       /* #2563eb */
-  --muted: 240 5% 74%;     /* #bdbcbd */
+  --background: 0 0% 4%; /* #08070c */
+  --foreground: 0 0% 96%; /* #faf9f5 */
+  --card: 0 0% 8%;    /* #0f0e17 */
+  --cta: 0 75% 40%;
+  --highlight: 0 90% 70%;
+  --brand: 0 85% 55%;
+  --muted: 0 0% 74%;     /* #bdbcbd */
   color-scheme: dark;
 }
 
@@ -35,6 +37,10 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+section[id] {
+  scroll-margin-top: 120px;
+}
+
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
@@ -44,7 +50,7 @@ body {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid hsl(var(--cta));
+  outline: 2px solid hsl(var(--highlight));
   outline-offset: 4px;
 }
 
@@ -238,14 +244,68 @@ html.lenis {
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
+/* Reflexos estáticos: preservam o contraste e não capturam interações. */
+.dark #inicio,
+.dark #stack,
+.dark #contato {
+  background-image:
+    radial-gradient(ellipse at 0% 80%, hsl(0 85% 40% / 0.13), transparent 42%),
+    radial-gradient(ellipse at 100% 15%, hsl(0 85% 40% / 0.10), transparent 40%);
+  background-repeat: no-repeat;
+}
+.dark #sobre {
+  background-image: radial-gradient(ellipse at 0% 10%, hsl(0 85% 40% / 0.08), transparent 45%);
+}
 
-/* ── Antigravity Canvas ──────────────────────────────────────────── */
-#antigravity-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+/* Faixas diagonais nas bordas, sem sobrepor imagens ou conteúdo. */
+.dark #inicio,
+.dark #sobre,
+.dark #stack,
+.dark #projetos,
+.dark #contato,
+.dark footer {
+  background-image:
+    linear-gradient(138deg, transparent 0 42%, hsl(0 90% 35% / 0.16) 42% 53%, transparent 53% 59%, hsl(0 90% 35% / 0.09) 59% 65%, transparent 65%),
+    linear-gradient(138deg, transparent 0 36%, hsl(0 90% 35% / 0.12) 36% 48%, transparent 48% 55%, hsl(0 90% 35% / 0.07) 55% 61%, transparent 61%),
+    radial-gradient(ellipse at 100% 50%, hsl(0 85% 40% / 0.16), transparent 70%),
+    radial-gradient(ellipse at 0% 50%, hsl(0 85% 40% / 0.12), transparent 70%);
+  background-size: min(30vw, 400px) 640px, min(24vw, 320px) 560px, min(35vw, 460px) 760px, min(30vw, 400px) 680px;
+  background-position: right center, left bottom, right center, left bottom;
+  background-repeat: no-repeat;
+}
+
+.dark #inicio,
+.dark #sobre {
+  background-position: right top, left bottom, right top, left bottom;
+}
+
+/* A chuva da Hero fica restrita às bordas; o centro permanece livre. */
+.hero-matrix-backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
   pointer-events: none;
-  z-index: 0;
+  mask-image: linear-gradient(to bottom, transparent 72px, #000 160px, #000 75%, transparent);
+}
+
+.hero-matrix {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(24px, 14vw, 180px);
+  opacity: 0.14;
+}
+
+.hero-matrix--left {
+  left: 0;
+  mask-image: linear-gradient(to right, #000, transparent);
+}
+
+.hero-matrix--right {
+  right: 0;
+  mask-image: linear-gradient(to left, #000, transparent);
+}
+
+@media (max-width: 639px) {
+  .hero-matrix { opacity: 0.08; }
 }
