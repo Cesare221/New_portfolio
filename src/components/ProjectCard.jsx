@@ -108,7 +108,7 @@ export default function ProjectCard({
           <span className="text-body-sm text-muted">
             {demoAvailable
               ? "Demonstração não disponível"
-              : "Demo temporariamente indisponível"}
+              : "Demonstração temporariamente indisponível"}
           </span>
         )}
         </div>

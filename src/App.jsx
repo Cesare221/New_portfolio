@@ -262,7 +262,7 @@ export default function App() {
                   href="#contato"
                   className="h-11 px-6 rounded-lg bg-cta hover:opacity-90 text-button font-medium text-white transition-opacity duration-200 inline-flex items-center justify-center"
                 >
-                  Fale Comigo
+                  Fale comigo
                 </a>
               </div>
 
@@ -403,7 +403,7 @@ export default function App() {
                 </h2>
 
                 <p className="text-body-md text-muted max-w-xl leading-relaxed">
-                  Aberto a novas oportunidades, colaborações e projetos desafiadores. Me fala o que você tem em mente.
+                  Aberto a novas oportunidades, colaborações e projetos desafiadores. Conte o que você tem em mente.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-3">
@@ -414,7 +414,7 @@ export default function App() {
                     className="inline-flex items-center gap-2 h-11 px-6 rounded-md bg-cta text-white text-button font-medium shadow-sm shadow-cta/20 hover:opacity-90 transition-opacity duration-200"
                   >
                     {copied ? <Check size={15} /> : <Copy size={15} />}
-                    {copied ? 'Email Copiado!' : PERSONAL.email}
+                    {copied ? 'E-mail copiado!' : PERSONAL.email}
                   </button>
                 </div>
 

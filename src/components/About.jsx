@@ -24,7 +24,7 @@ export default function About() {
                     Com base sólida em <strong className="font-medium text-foreground">JavaScript, React e Node.js</strong>, busco as melhores práticas para construir aplicações robustas, rápidas e bem estruturadas — do backend à interface.
                   </p>
                   <p className="text-body-md text-muted leading-relaxed">
-                    Acredito que bom código é aquele que outra pessoa consegue ler, manter e evoluir com confiança. Gosto de colaborar, trocar contexto e enfrentar problemas que exigem mais do que apenas digitar.
+                    Acredito que um bom código é aquele que outra pessoa consegue ler, manter e aprimorar com confiança. Gosto de colaborar, compartilhar contexto e enfrentar problemas que exigem mais do que apenas digitar.
                   </p>
                 </div>
                 <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted">

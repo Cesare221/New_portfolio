@@ -30,7 +30,7 @@ function createColumn(index) {
 
 export function MatrixRain({
   "aria-hidden": ariaHidden = true,
-  "aria-label": ariaLabel = "Animated field of falling characters",
+  "aria-label": ariaLabel = "Animação de caracteres em queda",
   background = "#020604",
   characters = defaultCharacters,
   className,
